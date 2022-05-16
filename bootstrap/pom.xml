@@ -6,7 +6,7 @@
         <groupId>com.akon.spring</groupId>
         <artifactId>spring-nacos-dubbo-provider</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath/>
     </parent>
     <artifactId>nacos-dubbo-privoder-bootstrap</artifactId>
     <version>0.0.1-SNAPSHOT</version>
