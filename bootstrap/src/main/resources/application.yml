@@ -14,5 +14,3 @@ dubbo:
   protocol:
     name: dubbo
     port: 12210
-  scan:
-    base-packages: com.akon.spring.facade.api

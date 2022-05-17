@@ -1,4 +1,4 @@
-package com.akon.spring.facade.dto;
+package com.akon.spring.provider.facade.dto;
 
 import lombok.Data;
 

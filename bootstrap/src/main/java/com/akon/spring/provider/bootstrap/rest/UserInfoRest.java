@@ -1,7 +1,7 @@
-package com.akon.spring.bootstrap.rest;
+package com.akon.spring.provider.bootstrap.rest;
 
-import com.akon.spring.facade.api.UserInfoFacade;
-import com.akon.spring.facade.dto.UserInfo;
+import com.akon.spring.provider.facade.api.UserInfoFacade;
+import com.akon.spring.provider.facade.dto.UserInfo;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

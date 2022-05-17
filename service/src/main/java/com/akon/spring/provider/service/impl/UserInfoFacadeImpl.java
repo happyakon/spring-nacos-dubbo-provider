@@ -1,7 +1,7 @@
-package com.akon.spring.service.impl;
+package com.akon.spring.provider.service.impl;
 
-import com.akon.spring.facade.api.UserInfoFacade;
-import com.akon.spring.facade.dto.UserInfo;
+import com.akon.spring.provider.facade.api.UserInfoFacade;
+import com.akon.spring.provider.facade.dto.UserInfo;
 import com.alibaba.dubbo.config.annotation.Service;
 
 

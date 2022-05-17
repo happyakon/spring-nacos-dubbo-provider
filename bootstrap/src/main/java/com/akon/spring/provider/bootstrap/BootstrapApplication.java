@@ -1,11 +1,11 @@
-package com.akon.spring.bootstrap;
+package com.akon.spring.provider.bootstrap;
 
-import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
+import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"com.akon.spring"})
-@NacosPropertySource(dataId = "spring-nacos-provider", autoRefreshed = true)
+@SpringBootApplication(scanBasePackages = {"com.akon.spring.provider"})
+@DubboComponentScan(basePackages = {"com.akon.spring.provider"})
 public class BootstrapApplication {
 
     public static void main(String[] args) {
