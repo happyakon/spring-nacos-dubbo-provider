@@ -9,7 +9,6 @@
         <relativePath/>
     </parent>
     <artifactId>nacos-dubbo-privoder-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
         <dependency>

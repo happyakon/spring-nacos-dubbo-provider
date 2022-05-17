@@ -10,7 +10,6 @@
     </parent>
 
     <artifactId>nacos-dubbo-privoder-facade</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
