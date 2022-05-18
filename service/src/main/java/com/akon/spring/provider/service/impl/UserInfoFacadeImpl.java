@@ -20,7 +20,6 @@ public class UserInfoFacadeImpl implements UserInfoFacade {
 
     @Override
     public List<UserInfoDto> getUserInfo() {
-        List<UserInfoDto> list=new ArrayList<>();
         List<UserInfo> allUserInfo = repository.getAllUserInfo();
         //转换
         return UserInfoConvert.INSTANCE.toDto(allUserInfo);
