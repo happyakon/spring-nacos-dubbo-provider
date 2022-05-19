@@ -27,11 +27,11 @@ mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
 logging:
   level:
+    root: info
     com.akon.spring.provider.nacos.dubbo.repository.dao: debug
   file:
-    path: ../logs
+    path: logs
   config: classpath:logback-spring.xml
-
 nacos:
   config:
     server-addr: 47.101.203.160:8848

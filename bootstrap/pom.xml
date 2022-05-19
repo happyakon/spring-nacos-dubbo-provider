@@ -42,6 +42,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <outputDirectory>${basedir}/target/lib</outputDirectory>
+                    <classifier>executable</classifier>
                 </configuration>
             </plugin>
             <plugin>
@@ -55,7 +56,6 @@
                         <path>
                             <groupId>org.mapstruct</groupId>
                             <artifactId>mapstruct-processor</artifactId>
-                            <version>1.4.2.Final</version>
                         </path>
                         <!-- other annotation processors -->
                     </annotationProcessorPaths>

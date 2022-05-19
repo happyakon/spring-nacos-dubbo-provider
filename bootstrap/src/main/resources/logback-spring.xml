@@ -11,7 +11,6 @@
             <pattern>${LOG_PATTERN}</pattern>
         </encoder>
     </appender>
-
     <appender name="FILE-INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!--记录的日志文件的路径及文件名-->
         <file>${log.path}/app.log</file>
@@ -114,6 +113,7 @@
     <appender name="ASYN_FILE_INFO" class="ch.qos.logback.classic.AsyncAppender">
         <appender-ref ref="FILE-INFO"/>
     </appender>
+
     <!-- 将service包下的日志分离出来 设置异步打印，提高打印效率 -->
     <appender name="ASYN_SERVICE_FILE" class="ch.qos.logback.classic.AsyncAppender">
         <appender-ref ref="SERVICE_FILE"/>
@@ -122,19 +122,20 @@
         <appender-ref ref="RPC_FILE"/>
     </appender>
     <!-- 将model包(sql)下的日志分离出来 并且异步打印，提高打印效率 -->
-    <logger name="com.akon.spring.provider.repository.dao" additivity="false">
+    <logger name="com.akon.spring.provider.repository.dao" additivity="true">
         <appender-ref ref="ASYN_SQL_FILE"/>
     </logger>
     <!-- 将service包下的日志分离出来 并且异步打印，提高打印效率 -->
-    <logger name="com.akon.spring.provider.service.api"  additivity="false" >
+    <logger name="com.akon.spring.provider.domain.service"  additivity="false" >
         <appender-ref ref="ASYN_SERVICE_FILE"/>
     </logger>
     <!-- 将rpc包下的日志分离出来 并且异步打印，提高打印效率 -->
-    <logger name="com.akon.spring.provider.domain.rpc"  additivity="false" >
+    <logger name="com.akon.spring.provider.integration.impl"  additivity="false" >
         <appender-ref ref="ASYN_RPC_FILE"/>
     </logger>
-    <root>
+    <root >
         <appender-ref ref="STDOUT"/>
-        <appender-ref ref="ASYN_FILE_INFO"/>
+        <appender-ref ref="ASYN_SQL_FILE"/>
+<!--        <appender-ref ref="ASYN_FILE_INFO"/>-->
     </root>
 </configuration>
