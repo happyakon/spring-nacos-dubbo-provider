@@ -133,9 +133,8 @@
     <logger name="com.akon.spring.provider.integration.impl"  additivity="false" >
         <appender-ref ref="ASYN_RPC_FILE"/>
     </logger>
-    <root >
+    <root>
         <appender-ref ref="STDOUT"/>
-        <appender-ref ref="ASYN_SQL_FILE"/>
 <!--        <appender-ref ref="ASYN_FILE_INFO"/>-->
     </root>
 </configuration>

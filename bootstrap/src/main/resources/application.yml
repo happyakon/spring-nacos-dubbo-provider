@@ -28,7 +28,7 @@ mybatis:
 logging:
   level:
     root: info
-    com.akon.spring.provider.nacos.dubbo.repository.dao: debug
+    com.akon.spring.provider.repository.dao: debug
   file:
     path: logs
   config: classpath:logback-spring.xml
