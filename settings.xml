@@ -205,24 +205,24 @@ under the License.
       <activation>
 	    <activeByDefault>true</activeByDefault>  
       </activation>
-      <repositories>
-        <repository>
-          <id>nexus-public</id>
-          <name>Nexus Repository</name>
-          <url>http://192.168.2.104:8081/repository/maven-public</url>
-          <releases><enabled>true</enabled></releases>
-		  <snapshots><enabled>true</enabled></snapshots>
-        </repository>
-      </repositories>
-	   <pluginRepositories>
-        <pluginRepository>
-          <id>nexus-public</id>
-          <name>Nexus Repository</name>
-          <url>http://192.168.2.104:8081/repository/maven-public</url>
-          <releases><enabled>true</enabled></releases>
-		  <snapshots><enabled>true</enabled></snapshots>
-        </pluginRepository>
-      </pluginRepositories>
+       <repositories>
+         <repository>
+           <id>nexus-public</id>
+           <name>Nexus Repository</name>
+           <url>http://45.253.64.55:12794/repository/akon-public/</url>
+           <releases><enabled>true</enabled></releases>
+           <snapshots><enabled>true</enabled></snapshots>
+         </repository>
+       </repositories>
+       <pluginRepositories>
+         <pluginRepository>
+           <id>nexus-public</id>
+           <name>Nexus Repository</name>
+           <url>http://45.253.64.55:12794/repository/akon-public/</url>
+           <releases><enabled>true</enabled></releases>
+           <snapshots><enabled>true</enabled></snapshots>
+         </pluginRepository>
+       </pluginRepositories>
 
 	  <properties>  
          <maven.compiler.source>1.8</maven.compiler.source>  
