@@ -19,4 +19,8 @@ public interface UserInfoConvert {
     @Mapping(target ="createTime",source = "createTime",dateFormat = "yyyy-MM-dd")
     @Mapping(target ="updateTime",source = "updateTime",dateFormat = "yyyy-MM-dd")
     List<UserInfoDto> toDto(List<UserInfo> list);
+
+    @Mapping(target ="createTime",source = "createTime",dateFormat = "yyyy-MM-dd")
+    @Mapping(target ="updateTime",source = "updateTime",dateFormat = "yyyy-MM-dd")
+    UserInfo toDo(UserInfoDto userInfoDto);
 }

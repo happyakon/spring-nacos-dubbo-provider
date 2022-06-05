@@ -6,7 +6,6 @@ import com.akon.spring.provider.facade.api.UserInfoFacade;
 import com.akon.spring.provider.facade.dto.UserInfoDto;
 import com.akon.spring.provider.service.convert.UserInfoConvert;
 import com.alibaba.dubbo.config.annotation.Service;
-import com.alibaba.dubbo.rpc.RpcContext;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -26,4 +25,14 @@ public class UserInfoFacadeImpl implements UserInfoFacade {
         //转换
         return UserInfoConvert.INSTANCE.toDto(allUserInfo);
     }
+
+
+    @Override
+    public int insert(UserInfoDto record) {
+        UserInfo userInfo = UserInfoConvert.INSTANCE.toDo(record);
+        int insert = repository.insert(userInfo);
+        return insert;
+    }
+
+
 }
