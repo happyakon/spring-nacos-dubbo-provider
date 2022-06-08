@@ -6,7 +6,7 @@
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="user_age" jdbcType="INTEGER" property="userAge" />
     <result column="user_score" jdbcType="BIGINT" property="userScore" />
-    <result column="user_salary" jdbcType="DOUBLE" property="userSalary" />
+    <result column="user_salary" jdbcType="DECIMAL" property="userSalary" />
     <result column="user_sex" jdbcType="CHAR" property="userSex" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
@@ -21,12 +21,12 @@
     where user_id = #{userId,jdbcType=INTEGER}
   </select>
   <insert id="insert" parameterType="com.akon.spring.provider.domain.model.UserInfo">
-    insert into user_info (user_id, user_name, user_age, 
+    insert into user_info ( user_name, user_age,
       user_score, user_salary, user_sex, 
       create_time, update_time)
-    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userAge,jdbcType=INTEGER}, 
+    values (#{userName,jdbcType=VARCHAR}, #{userAge,jdbcType=INTEGER},
       #{userScore,jdbcType=BIGINT}, #{userSalary,jdbcType=DOUBLE}, #{userSex,jdbcType=CHAR}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+      now(), now())
   </insert>
   <insert id="insertSelective" parameterType="com.akon.spring.provider.domain.model.UserInfo">
     insert into user_info
@@ -118,7 +118,7 @@
       user_salary = #{userSalary,jdbcType=DOUBLE},
       user_sex = #{userSex,jdbcType=CHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
-      update_time = #{updateTime,jdbcType=TIMESTAMP}
+      update_time = now()
     where user_id = #{userId,jdbcType=INTEGER}
   </update>
   <select id="getAllUserInfo" resultMap="BaseResultMap">

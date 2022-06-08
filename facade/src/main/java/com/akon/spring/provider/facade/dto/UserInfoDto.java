@@ -3,6 +3,7 @@ package com.akon.spring.provider.facade.dto;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
@@ -17,7 +18,7 @@ public class UserInfoDto implements Serializable {
 
     private Long userScore;
 
-    private Double userSalary;
+    private BigDecimal userSalary;
 
     private String userSex;
 
