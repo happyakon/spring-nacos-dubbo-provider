@@ -22,7 +22,9 @@ spring:
       test-on-return: false
       pool-prepared-statements: false
       max-open-prepared-statements: -1
-
+  cloud:
+    nacos:
+      server-addr:  45.253.64.55:12792
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
 logging:
@@ -32,9 +34,6 @@ logging:
   file:
     path: logs
   config: classpath:logback-spring.xml
-nacos:
-  config:
-    server-addr: 47.101.203.160:8848
 
 dubbo:
   application:

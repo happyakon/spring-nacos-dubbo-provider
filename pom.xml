@@ -13,6 +13,9 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <properties>
+        <revision>0.0.1-SNAPSHOT</revision>
+    </properties>
     <modules>
         <module>bootstrap</module>
         <module>facade</module>
@@ -27,27 +30,27 @@
             <dependency>
                 <groupId>com.akon.spring</groupId>
                 <artifactId>nacos-dubbo-privoder-facade</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.akon.spring</groupId>
                 <artifactId>nacos-dubbo-privoder-service</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.akon.spring</groupId>
                 <artifactId>nacos-dubbo-privoder-domain</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.akon.spring</groupId>
                 <artifactId>nacos-dubbo-privoder-repository</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.akon.spring</groupId>
                 <artifactId>nacos-dubbo-privoder-integration</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
