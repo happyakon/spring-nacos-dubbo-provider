@@ -1,5 +1,7 @@
 server:
   port: 8090
+nacos:
+  server-address: 47.101.203.160:8848
 spring:
   application:
     name: spring-nacos-provider
@@ -24,7 +26,10 @@ spring:
       max-open-prepared-statements: -1
   cloud:
     nacos:
-      server-addr:  45.253.64.55:12792
+      server-addr:  ${nacos.server-address}
+    alibaba:
+      seata:
+        tx-service-group: provider-service
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
 logging:
@@ -39,7 +44,20 @@ dubbo:
   application:
     name: ${spring.application.name}
   registry:
-    address: nacos://45.253.64.55:12792
+    address: nacos://${nacos.server-address}
   protocol:
     name: dubbo
     port: 12210
+
+seata:
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      group: SEATA_GROUP
+      server-addr: ${nacos.server-address}
+  config:
+    type: nacos
+    nacos:
+      group: SEATA_GROUP
+      server-addr: ${nacos.server-address}
