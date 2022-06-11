@@ -1,8 +1,8 @@
 server:
   port: 8090
 nacos:
-#  server-address: 47.101.203.160:8848
-  server-address: 45.253.64.55:12792
+  server-address: 47.101.203.160:8848
+#  server-address: 45.253.64.55:12792
 spring:
   application:
     name: spring-nacos-provider
